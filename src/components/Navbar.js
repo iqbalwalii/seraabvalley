@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import {Link, useLocation} from 'react-router-dom';  
 import './Navbar.css'   
 
@@ -16,8 +17,10 @@ function removeBg() {
     myNav.classList.remove('nav-colored');
 }
 
-const Navbar = () => {
+const Navbar = ({ cartItems }) => {
     const location = useLocation();
+
+ 
     function navbartoggle()
     {
         const navbar= document.querySelector('.navbar__links');
@@ -73,7 +76,7 @@ const Navbar = () => {
                     to="/cart"
                     className={location.pathname === '/cart' ? 'active' : 'inactive'}
                 >
-                    Basket <i className="cart"></i>
+                    Basket <span className="cart__total"> {cartItems.length}</span>
                 </Link>
                 <Link
                     to="/Signup"
@@ -93,4 +96,10 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+const mapStateToProps = state => {
+    return {
+        cartItems: state.selectedItem,
+    };
+};
+
+export default connect(mapStateToProps)(Navbar);

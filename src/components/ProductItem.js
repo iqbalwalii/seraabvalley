@@ -30,7 +30,7 @@ const ProductItem = ({item, selectItem}) => {
              
             </div>
             
-            <button  className='cart__btn' onClick={e => selectItem(item)
+            <button  className='cart__btn' onClick={e => selectItem(item._id)
             }>
                <span>Add to Basket</span> <FaCartPlus style={{'fontSize': '1rem'}} /> 
             </button> 

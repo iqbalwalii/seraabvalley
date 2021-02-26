@@ -6,6 +6,10 @@
     align-items: center;
     
 }
+.cart__item__img >img
+{
+    width: 100px;
+}
 
 .cart__item
 {
@@ -175,7 +179,7 @@ hr
 .product__image
 {
     margin: 0 3rem;
-    width: 30vw;
+    width: 10vw;
     height: 30vw;
 }
 .cart__item

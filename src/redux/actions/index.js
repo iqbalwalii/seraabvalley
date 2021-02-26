@@ -7,6 +7,13 @@ export const selectItem = item => {
         type: 'SELECT__ITEM',
         payload: item,
     };
+};export const removeItem = item => {
+    console.log('in action remove');
+    console.log(item);
+    return {
+        type: 'REMOVE__ITEM',
+        payload: item,
+    };
 };
 
 export const fetchProducts = () => {
@@ -18,3 +25,22 @@ export const fetchProducts = () => {
         });
     };
 };
+export const userAuthentication = userCredentials => {
+    return async function (dispatch, getState) {
+        const { data } = await valley.post('/user/create', { ...userCredentials });
+        dispatch({
+            type: 'USER__AUTHENTICATION',
+            payload: data,
+        });
+    };
+};
+export const loginUser = userCredentials => {
+    return async function (dispatch, getState) {
+        const { data } = await valley.post('/user/read', { ...userCredentials });
+        dispatch({
+            type: 'USER__AUTHENTICATION',
+            payload: data,
+        });
+    };
+};
+

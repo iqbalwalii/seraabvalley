@@ -1,10 +1,14 @@
 .product__item__top 
 {
    display: flex;
-   width: 80vw;
-   margin: auto;
+   width: 50vw;
+   margin-left: 2rem;
    padding: 2rem;
    padding-top: 20vh;
+}
+.product__description
+{
+    width: 38vw;
 }
 .product__item
 {
@@ -127,6 +131,7 @@
         flex-direction: column;
         justify-content: space-evenly;
     }
+    
     .product__img
     {
         height: 35vh;
@@ -167,6 +172,10 @@
     .product__item__bottom > div > p
     {
         font-size: 1.2rem;
+    }
+    .product__description
+    {
+        width: 100%;
     }
 
 }

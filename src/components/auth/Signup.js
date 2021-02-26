@@ -2,7 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useFormValidation from './useFormValidation';
 import validate from './validateLogin';
-// import valley from '../../api/valley';
+
+import { connect } from 'react-redux';
+import { userAuthentication } from '../../redux/actions';
 import './Signup.css';
 import Navbar from '../Navbar';
 const INITIAL_FORM_STATE = {
@@ -21,7 +23,7 @@ const createUser = async userData => {
     // }
 };
 
-const Signup = () => {
+const Signup = ({ userAuthentication, user, history }) => {
     const {
         values,
         isSubmitting,
@@ -29,7 +31,8 @@ const Signup = () => {
         onBlurHandler,
         onChangeHandler,
         onSubmitHandler,
-    } = useFormValidation(INITIAL_FORM_STATE, validate, createUser);
+    } = useFormValidation(INITIAL_FORM_STATE, validate, userAuthentication);
+
     function toggleForm()
     {
         const backdrop = document.querySelector('.backdrop__form');
@@ -81,9 +84,16 @@ const Signup = () => {
                     <button type="submit">Sign Up</button>
                 </form>
                     <Link to="/Signin" className='change__over' onClick={toggleForm}>Already Have an Account</Link>
+                    <h1>
+                {user.message ? user.message : user.email ? history.push('/cart') : ''}
+            </h1>
             </div>
         </div>
     );
 };
-
-export default Signup;
+const mapStateToProps = state => {
+    return {
+        user: state.user,
+    };
+};
+export default connect(mapStateToProps, { userAuthentication })(Signup);

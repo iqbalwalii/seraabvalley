@@ -1,6 +1,8 @@
 import React from 'react';
+
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import useFormValidation from './useFormValidation';
+import { loginUser } from '../../redux/actions';import useFormValidation from './useFormValidation';
 import validate from './validateLogin';
 import valley from '../../api/valley';
 import './Signup.css';
@@ -13,17 +15,17 @@ const INITIAL_FORM_STATE = {
     password: '',
 };
 // 
-const loginUser = async userData => {
-    console.log('performing creation with data as: ', userData)
-    try {
-        const reponse = await axios.post('https://ancient-inlet-41931.herokuapp.com//user/read', {...userData});
-        console.log(reponse);
-    } catch (error) {
-        console.log(error, 'errrrrrrrr');
-    }
-};
+// const loginUser = async userData => {
+//     console.log('performing creation with data as: ', userData)
+//     try {
+//         const reponse = await axios.post('https://ancient-inlet-41931.herokuapp.com//user/read', {...userData});
+//         console.log(reponse);
+//     } catch (error) {
+//         console.log(error, 'errrrrrrrr');
+//     }
+// };
 
-const Login = () => {
+const Login = ({ loginUser, user, history }) => {
     const {
         values,
         isSubmitting,
@@ -74,6 +76,13 @@ const Login = () => {
 <button type="submit" >SIGN IN</button>
 </form>
 <Link to="/Signup" className='change__over' onClick={toggleForm}>Don't Have an Account</Link>
+<h1>
+                {user.message
+                    ? user.message
+                    : user.email
+                    ? history.push(history.location.state)
+                    : ''}
+            </h1>
 </div>
 
 </div>
@@ -83,4 +92,10 @@ const Login = () => {
 );
 };
 
-export default Login;
+
+const mapStateToProps = state => {
+    return {
+        user: state.user,
+    };
+};
+export default connect(mapStateToProps, { loginUser })(Login);
