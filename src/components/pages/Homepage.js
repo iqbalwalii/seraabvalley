@@ -31,11 +31,6 @@ const Homepage = (props) => {
             <Link to='/store' className="view__more__btn">View more Products
             </Link>
             <Footer/>
-            <script src="/__/firebase/8.2.9/firebase-app.js"></script>
-
-<script src="/__/firebase/8.2.9/firebase-analytics.js"></script>
-
-<script src="/__/firebase/init.js"></script>
         </div>
     )}
 }
