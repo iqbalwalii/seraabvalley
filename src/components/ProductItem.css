@@ -1,0 +1,125 @@
+.product
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.733);
+    border-radius: 20px;
+    position: relative;
+    height: 90%;
+    padding: 20px 0px;
+    width: 100%;
+    margin-right: 30px;
+    box-shadow: 1px 1px 20px 20px rgba(128, 128, 128, 0.119);
+    transition: all 0.3s ease-out;
+    
+}
+
+.product:hover
+{
+    box-shadow: 0px 0px 40px 1px #525252;
+    transform: scale(1.04);
+}
+
+.product__image >img
+{
+    border-radius: 80%;
+    width: 80%;
+    height:50%;
+    object-fit: cover;
+    position: absolute;
+    top: -20%;
+    left: 10%;
+    border: 1px solid rgba(0, 0, 0, 0.789);
+    filter: drop-shadow(2px 5px 20px rgba(0, 0, 0, 0.466)) 
+}
+
+.product__image
+{ 
+    width: 250px;
+    height: 80px;
+}
+.product__details
+{
+    margin-top: 4rem;
+    padding: 1.5rem;
+}
+.product__name
+{
+    font-size: 20px;
+
+}
+.product__description
+{
+    font-size: 0.9rem;
+    padding: 10px 0px;
+}
+.product__price
+{
+    font-size: 1rem;
+    color:#e72b6a;
+    font-weight:bolder;
+    text-shadow: 1px 1px rgba(26, 26, 26, 0.645);
+    display: flex;
+    justify-content: space-between;
+    
+}
+.product__price > .product__quantity
+{
+    font-size: 0.8rem;
+    display: block;
+
+}
+
+.cart__btn
+{
+    
+    background: var(--link-bg);
+    box-shadow: 0 0px 20px rgb(211, 209, 209);
+    padding: 1rem 1.2rem;
+    border-radius: 20px;
+    border-bottom-right-radius: 50px;
+    color: #ffffff;
+    font-weight: 500;
+    position: absolute;
+    bottom: -5%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease-out;
+    backface-visibility: hidden;
+    border: none;
+    outline: none;
+    transition: all 1s;
+    font-size: 0.8rem;
+}
+.cart__btn:hover{
+    color: #fff;
+    text-decoration: none;
+    transform: scale(1.02);
+    box-shadow: 0px 0px 30px 1px #00000073;
+    background: var(--btn-gradient-bg);
+    border-radius: 20px;
+    border-top-left-radius: 50px;
+    transition: all 1s;
+}
+.cart__btn> span{
+    font-size: 0.8rem;
+    display: none;
+    transition: all 1s;
+}
+.cart__btn:hover > span {
+    display: inline;
+    margin-right: 10px;
+}
+
+.detail__btn
+{
+    left: -3%;
+    width: 40%;
+    display: inline-block;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius:20px;
+    padding: inherit 2rem;
+}

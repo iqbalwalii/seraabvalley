@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap');
+.contact__hero
+{
+    padding-top: 15vh;
+    display: flex;
+    justify-content: space-around;
+    height: 90vh;
+
+}
+.description
+{
+    background-color: #f0f0f0;
+    width: 50vw;
+    text-align: center;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 0.7rem;
+    padding: 3rem;
+    padding-top: 0%;
+    z-index: -20;
+
+}
+.contact_form_data
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+    /* width: 40vw; */
+    height: 60vh;
+}
+.contact_form_data > *
+{
+    padding: 20px;
+  font-family: 'Libre Baskerville', serif;
+   border: none;
+   outline: none;
+   background-color: #e1eaf7;
+    height: 3rem;
+}
+
+.contact__heading
+{
+    font-family: 'Libre Baskerville', serif;
+    font-size: 2rem;
+    text-align: center;
+}
+.contact__mail__icon
+{
+    filter: drop-shadow(40px 30px 100px #000000);
+    height: 20vh;
+    margin: auto;
+}
+
+.contact_form_submit
+{
+    width: 20vw;
+    height: 3rem;
+    background-color: #1e90ff;
+    align-self: center;
+    border-radius: 20px;
+    border-bottom-right-radius: 50px;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 10px;
+    transition: all 0.2s linear;
+
+}
+
+.contact_form_submit:hover
+{
+
+    transform: scale(1.02);
+    border-radius: 20px;
+    border-top-left-radius: 50px;
+}
+.hero__heading
+{
+    padding: 2rem 4rem;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media (max-width : 620px)
+{
+    .contact__hero
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 140vh;
+        background: rgba(160, 160, 160, 0.219);
+    }
+    .hero__heading
+    {
+        padding: 1rem 0px;
+        font-size: 1.2rem;
+
+    }
+    .contact__mail__icon
+    {
+        width: 80px;
+    }
+    .description
+    {
+        width: fit-content;
+        z-index: 1;
+        background: transparent;
+
+    } .contact__form .backdrop__form {
+        right: 0%;
+       
+    }
+    .contact__form__data
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: fit-content;
+        margin: auto;
+
+    }
+   
+}
+ 

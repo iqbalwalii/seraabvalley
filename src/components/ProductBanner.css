@@ -1,0 +1,53 @@
+.product__banner{
+    
+    display: flex;
+    height: 100vh;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 5rem;
+    margin-top: 5rem;
+    padding: 5rem auto;
+}
+
+.info{
+    margin-right: 0;
+    font-size: 1.1rem;
+    padding: 2rem;
+}
+.margin__bottom
+{
+    margin-bottom: 8rem;
+}
+
+.info > h1{
+    font-size: 1rem;
+}
+
+.product__banner:nth-of-type(odd) > .info{
+    
+    text-align:left;
+    order:-1;
+    margin-right:10px;
+    
+}
+
+@media only screen and (max-width : 640px)
+{
+    
+.product__banner
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: initial;
+    margin-top: 5rem;
+    padding: 0px 1rem 1rem 1rem;
+}
+.info{
+    display: none;
+}
+
+
+
+
+}

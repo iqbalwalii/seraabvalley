@@ -1,0 +1,160 @@
+.navbar
+{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 98vw;
+    z-index: 100;
+   
+}
+.active {
+    color: #ffffff;
+    background-color: var(--blue);
+}
+.inactive {
+    background-color: transparent;
+}
+
+a {
+    color: #000;
+}
+
+.navbar__links
+{
+    display: flex;
+    align-items: center;
+}
+
+.navbar__links > *
+{
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    margin-left: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    transition: all .5s ease-out;
+
+}
+/* .navbar__links > *::after
+{
+    content: '';
+    display:block;
+    background-color: #be3d68;
+    height: 2px;
+    width:0px;
+    position: absolute;
+    bottom: 0;
+    left: 3%;
+    margin-left: 3%;
+    transition: all 1s ease-out;
+} */
+/* .navbar__links > *:hover
+{
+   color: #be3d68;
+} */
+.logo
+{
+    display: inline;
+    outline: none;
+   height: 8vh;
+}
+/* .navbar__links > *:hover::after
+{
+    width: 90%;
+    color: #be3d68;
+} */
+
+.navbar__logo span
+{
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+.navbar__logo
+{
+    display: flex;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.logo__heading
+{
+    display: inline;
+}
+.navigation__text
+{
+
+    text-decoration: none;
+    color: black;
+}
+.navbar__links > *:hover {
+    background-color: var(--blue);
+    color: #fff;
+}
+.nav-colored {
+    background-color: #ebebeb;
+}
+.nav-transparent {
+    background-color: transparent;
+}
+.display
+{
+    display: flex;
+    flex-direction: column;
+
+}
+.hamburger 
+{
+    padding: 10px;
+    display: none;
+}
+.hamburger :hover
+{
+    cursor: pointer;
+}
+.hamburger > span
+{
+    background-color: black;
+    width: 40px;
+    height: 5px;
+    margin-bottom: 4px;
+    display: block;
+}
+.brand
+{
+    display: flex;
+}
+@media only screen and (max-width: 640px)
+{
+    .hamburger
+    {
+        display: initial;
+    }
+    .navbar__links
+    {
+        display: none;
+    }
+    .display
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #f0f0f0;
+        width: 100vw;
+    }
+    .navbar
+    {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0px
+    }
+
+}

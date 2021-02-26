@@ -1,0 +1,163 @@
+.main__page__handler
+{
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+
+}
+.form__data
+{   
+    display: flex;
+    flex-direction: column;
+    animation: load_form 2s linear;
+
+}
+.form__main
+{
+    display: flex;
+    flex-direction: column;
+}
+.form__heading
+{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+.form__main>input
+{
+    padding: 0.7rem;
+    width: 30vw;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+}
+.form__main > button
+{
+    border-radius: 5px;
+    width: 10vw;
+    height: 6vh;
+    align-self: center;
+    background-color: #1e90ff;
+    border-bottom-right-radius: 35%;
+    cursor: pointer;
+    transition: all 0.2s linear;
+    border: none;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #fff;
+    text-transform: uppercase;    margin-top: 1rem;
+
+}
+.form__main > button:hover
+{
+    border-bottom-right-radius: 0%;
+    border-top-left-radius: 35%;
+    
+}
+.form__link
+{
+    text-align: center;
+    padding: 1rem;
+}
+.backdrop__form
+{
+    position: absolute;
+    /* background-color: #1e90ff; */
+    background: linear-gradient(360deg, #1e90ff, #fd00e8);
+    width: 65vw;
+    height: 100vh;
+    top: 0%;
+    right: -10%;
+    z-index: -11;
+    border-bottom-left-radius: 100%;
+    transition: all 2s ease;
+    
+}
+.toggle
+{   
+    bottom: 0%;
+    left: -10%;
+    border-top-right-radius: 80%;
+    border-bottom-left-radius: 0%;
+    
+}
+.change__over
+{
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+}
+@keyframes load_form
+{   
+    0%
+    {
+        opacity: 0;
+    }
+
+    20%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 0.5;
+    }
+    80%
+    {
+        opacity: 0.7;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+
+}
+.input__error
+{
+    color: red;
+    font-weight: bold;
+}
+.border__red
+{
+    border:1px solid rgb(235, 4, 4);
+}
+@media only screen and (max-width : 640px)
+{
+    .backdrop__form
+{
+    position: absolute;
+    /* background-color: #1e90ff; */
+    background: linear-gradient(360deg, #1e90ff, #fd00e8);
+    width: 65vw;
+    height: 100vh;
+    top: 0%;
+    right: -10%;
+    border-bottom-left-radius: 70%;
+    transition: all 2s ease;
+    
+}
+.form__main > button
+{
+    width: 40%;
+
+}
+.form__main
+{
+    margin: 10px 10px;
+}
+.form__main>input
+{
+    width: 100%;
+}
+.toggle
+{   
+    bottom: 0%;
+    left: -10%;
+    border-top-right-radius: 60%;
+    border-bottom-left-radius: 0%;
+    
+}
+}
