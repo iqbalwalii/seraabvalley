@@ -11,12 +11,12 @@ import Navbar from '../Navbar';
 
 import './Store.css';
 import axios from 'axios';
-let counter=1;
-const carouselSlide= document.querySelector('.carousel__slider');
-const carouselImages = document.querySelectorAll('.carousel__slider img');
-console.log(carouselImages);
-const prevBtn= document.querySelector('#prevBtn');
-const nextBtn= document.querySelector('#nextBtn');
+// let counter=1;
+// const carouselSlide= document.querySelector('.carousel__slider');
+// const carouselImages = document.querySelectorAll('.carousel__slider img');
+// console.log(carouselImages);
+// const prevBtn= document.querySelector('#prevBtn');
+// const nextBtn= document.querySelector('#nextBtn');
 // const size= carouselImages[0].clientWidth;
 // carouselSlide.style.transform ='translateX(' +(size + counter) + 'px  )';
 
@@ -44,7 +44,7 @@ const Store = ({productsList, selectItem, fetchProducts}) => {
     return (
         <>
             <Navbar />
-            <div className="carousel">
+            {/* <div className="carousel">
                 <div className="carousel__slider">
                     <img src="/assets/images/carousel6.jpg" id='lastClone'alt=""/>
                     <img src="/assets/images/carousel1.jpg" alt=""/>
@@ -57,7 +57,7 @@ const Store = ({productsList, selectItem, fetchProducts}) => {
                 </div>
             </div>
             <button id='prevBtn'>Prev</button>
-            <button id='nextBtn'>Next</button>
+            <button id='nextBtn'>Next</button> */}
             <div className="store__container">
                 {productsList.map(item => {
                     return <ProductItem item={item} selectItem={selectItem} />;
