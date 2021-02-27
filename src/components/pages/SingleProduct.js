@@ -18,16 +18,16 @@ const SingleProduct = (props) => {
             <div className="product__item__top">
             
                 <img src={product.imageUrl} alt={product.name} className="product__img" />
-                <div className="product__detials">
-                    <h1 className="product__name">{product.name}</h1>
-                    <h3 className="product__description">
+                <div className="single__product__detials">
+                    <h1 className="single__product__name">{product.name}</h1>
+                    <h3 className="single__product__description">
                         {product.description}
                     </h3>
-                    <h3 className="product__price">
+                    <h3 className="single__product__price">
                         <span>Price</span>
                         &#8377;{product.price}
                     </h3>
-                    <h3 className="product__quantity">
+                    <h3 className="single__product__quantity">
                         <span>Quantity</span>
                         {product.quantity}
                     </h3> <button className="product__btn">

@@ -11,12 +11,15 @@ import Navbar from '../Navbar';
 
 import './Store.css';
 import axios from 'axios';
-// let counter=1;
-// const carouselSlide= document.querySelector('.carousel__slider');
-// const carouselImages = document.querySelectorAll('.carousel__slider img');
-// const prevBtn= document.querySelector('#prevBtn');
-// const nextBtn= document.querySelector('#nextBtn');
+let counter=1;
+const carouselSlide= document.querySelector('.carousel__slider');
+const carouselImages = document.querySelectorAll('.carousel__slider img');
+console.log(carouselImages);
+const prevBtn= document.querySelector('#prevBtn');
+const nextBtn= document.querySelector('#nextBtn');
 // const size= carouselImages[0].clientWidth;
+// carouselSlide.style.transform ='translateX(' +(size + counter) + 'px  )';
+
 
 // const ImageURLS=[
 //     'https://images.unsplash.com/photo-1595412017587-b7f3117dff54?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=752&q=80',
@@ -41,7 +44,7 @@ const Store = ({productsList, selectItem, fetchProducts}) => {
     return (
         <>
             <Navbar />
-            {/* <div className="carousel">
+            <div className="carousel">
                 <div className="carousel__slider">
                     <img src="/assets/images/carousel6.jpg" id='lastClone'alt=""/>
                     <img src="/assets/images/carousel1.jpg" alt=""/>
@@ -52,7 +55,7 @@ const Store = ({productsList, selectItem, fetchProducts}) => {
                     <img src="/assets/images/carousel6.jpg" alt=""/>
                     <img src="/assets/images/carousel1.jpg" id='firstClone' alt=""/>
                 </div>
-            </div> */}
+            </div>
             <button id='prevBtn'>Prev</button>
             <button id='nextBtn'>Next</button>
             <div className="store__container">
