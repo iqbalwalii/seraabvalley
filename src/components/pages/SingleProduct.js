@@ -22,7 +22,8 @@ const SingleProduct = (props) => {
                     <h1 className="single__product__name">{product.name}</h1>
                     <h3 className="single__product__description">
                         {product.description}
-                    </h3><div className='single__product__price__group'>
+                    </h3>
+                    <div className='single__product__price__group'>
                     {
                         product.price.map( (price, index) => {
                             return <div className="detail__group">
@@ -33,7 +34,8 @@ const SingleProduct = (props) => {
                                 </div>
                             </div>
                         })
-                    }</div>
+                    }
+                    </div>
                     <button className="product__btn">
                         <span> Add To Cart</span>
                         <FaCartPlus style={{ fontSize: '2rem' }} />
