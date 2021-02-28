@@ -8,12 +8,11 @@ const Footer = () => {
                 <img className="footer__image"src="/assets/images/footer.png" alt=""/>
             </div>
             <div className='footer__services main'>
-                <h2 className=' footer__heading'><strong>CONTACT</strong></h2>
+                <h2 className='footer__heading'><strong>CONTACT</strong></h2>
                 <ul>
-                    <li>Support</li>
-                    <li>+91 7006414186</li>
-                    <li>@company</li>
-                    <li>@company</li>
+                    <li>+91 9796344888</li>
+                    <li>+91 8717068855</li>
+                    <li>care@seraabvalley.com</li>
                 </ul>
             </div>
             
@@ -28,8 +27,8 @@ const Footer = () => {
             </div>
             <div className='footer__more main'>
                 <h2 className='footer__heading'><strong>COMPANY</strong></h2>
-                <p className='footer__para'>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate laboriosam veniam odio, qui repudiandae nam, amet se
+                <p >
+                Seraab Valley is our endeavor to deliver  goodness right at your doorstep. Building on our two decades of flourishing wholesale operations
                 </p>
             </div>
         

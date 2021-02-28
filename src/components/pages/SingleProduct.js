@@ -46,7 +46,7 @@ const SingleProduct = (props) => {
                         <h1 className="product__heading">
                             Benefits
                         </h1>
-                        <hr/>
+                    
                         <p>{product.benefits}</p>
                     </div>
                      <div className="product__use">

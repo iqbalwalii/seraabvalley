@@ -33,24 +33,17 @@ ul li{
     height: 40vh;
     filter: drop-shadow(12px 10px 10px #0000007a);
 }
-
-.footer__para
-{
-    padding: 3% 0%;
-    width: 30vw;
-    font-size: 1rem;
-}
 h2>span{
     display: block;
     font-size: 0.9rem;
 }
-.footer__heading1
+.footer__heading
 {
     text-align: center;
 }
 
 
-@media only screen and (max-width : 640px)
+@media only screen and (max-width : 480px)
 {
     .footer
     {
@@ -58,6 +51,7 @@ h2>span{
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+        padding-bottom: 0;
 
     }
     .footer__name
@@ -76,10 +70,10 @@ h2>span{
     .footer__image
     {
         width: 100vw;
+        height: 80%;
     }
-    .footer__para{
+    .footer__more p{
+        margin-top: 1rem;
         text-align: center;
-        padding: 0%;
     }
-
 }

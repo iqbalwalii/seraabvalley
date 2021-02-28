@@ -77,7 +77,7 @@
     padding: 2rem 4rem;
 }
 /* Smartphones (portrait and landscape) ----------- */
-@media (max-width : 620px)
+@media (max-width : 480px)
 {
     .contact__hero
     {
@@ -91,7 +91,7 @@
     .hero__heading
     {
         padding: 1rem 0px;
-        font-size: 1.2rem;
+        font-size: 1rem;
 
     }
     .contact__mail__icon
@@ -116,6 +116,10 @@
         width: fit-content;
         margin: auto;
 
+    }
+    .contact__heading
+    {
+        font-size: 1.5rem;
     }
    
 }

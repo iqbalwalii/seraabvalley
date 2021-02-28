@@ -46,7 +46,7 @@ const Signup = ({ userAuthentication, user, history }) => {
 <div className="backdrop__form">
 </div>
             <div className='form__data'>
-            <h1 className="form__heading">Sign up</h1>
+            <h1 className="form__heading">SIGN UP</h1>
                 <form onSubmit={onSubmitHandler} className='form__main'>
                     <input
                         type="text"
