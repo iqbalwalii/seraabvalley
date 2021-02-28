@@ -41,7 +41,7 @@ const Navbar = ({ cartItems }) => {
         <nav className="navbar">
             <div className="navbar__logo">
                 <div className='brand'>
-                    <img  className='logo' src="/assets/images/color.svg" alt=""/>
+                    <img  className='logo' src="/assets/images/irfan.svg" alt=""/>
                     <h1 className="logo__heading" >
                     <Link to="/" className='navigation__text'>Serab valley <span>The Taste of kashmir</span></Link>
                     </h1>

@@ -140,5 +140,8 @@
     {
         padding: .8rem;
     }
+    .product .detail__btn {
+        width: 30%;
+    }
 
 }
