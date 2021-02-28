@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 const ProductBanner = ({productItems, selectItem}) => {
     return (
         <div className="product__banner">
+            <div className="banner__backdrop"></div>
             {productItems?.map(item => {
                 return <ProductItem item={item} selectItem={selectItem}/>
             })}

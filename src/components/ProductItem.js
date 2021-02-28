@@ -17,7 +17,7 @@ const ProductItem = ({item, selectItem}) => {
                     {item.name}
                 </h1>
                 <h3 className="product__description">
-                    {item.description.slice(0,80)}
+                    {item.description.slice(0,40)}
                 </h3>
                 <h3 className="product__price" >
                  <span> ₹ {item.price[0]} </span>   <span>{item.quantity[0]} </span>

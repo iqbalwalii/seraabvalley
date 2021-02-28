@@ -66,8 +66,14 @@
 }
 .view__more__btn
 {
-    margin: 1rem auto;
+    margin: 4rem auto;
+    margin-bottom: 4%;
     width: 60%;
+}
+.detail__btn
+{
+    width: 25%;
+    
 }
 
 

@@ -14,7 +14,7 @@ const SingleProduct = (props) => {
     return (
     <>
     <Navbar/>
-        <div className="product__item">
+        <div className="single__product__item">
             <div className="product__item__top">
             
                 <img src={product.imageUrl} alt={product.name} className="product__img" />
@@ -22,20 +22,25 @@ const SingleProduct = (props) => {
                     <h1 className="single__product__name">{product.name}</h1>
                     <h3 className="single__product__description">
                         {product.description}
-                    </h3>
-                    <h3 className="single__product__price">
-                        <span>Price</span>
-                        &#8377;{product.price}
-                    </h3>
-                    <h3 className="single__product__quantity">
-                        <span>Quantity</span>
-                        {product.quantity}
-                    </h3> <button className="product__btn">
-                    <span> Add To Cart</span>
-                    <FaCartPlus style={{ fontSize: '2rem' }} />
-                </button>
+                    </h3><div className='single__product__price__group'>
+                    {
+                        product.price.map( (price, index) => {
+                            return <div className="detail__group">
+                                <div className="single__product__price">
+                                    <h3>  &#8377;  {price}</h3>
+                                </div><div className="single__product__quantity">
+                                    <h3>{product.quantity[index]}</h3>
+                                </div>
+                            </div>
+                        })
+                    }</div>
+                    <button className="product__btn">
+                        <span> Add To Cart</span>
+                        <FaCartPlus style={{ fontSize: '2rem' }} />
+                    </button>
                 </div>
             </div>
+        </div>
             <div className="product__item__bottom">
                     <div className="product__benefits">
                         <h1 className="product__heading">
@@ -49,7 +54,6 @@ const SingleProduct = (props) => {
                         <p>{product.benefits}</p>
                     </div>
             </div>
-        </div>
         <Footer/>
     </>
     );
