@@ -77,3 +77,31 @@ h2>span{
         text-align: center;
     }
 }
+@media only screen and (min-width: 481px) and (max-width : 768px)
+{
+    .footer
+    {
+        flex-wrap: wrap;
+    }
+    .footer__name
+    {
+        margin-top: 1.5rem;
+        order: 4;
+        width: 100%;
+    }
+    .footer__name > .footer__image
+    {
+        width: 100%;
+    }
+    .footer__address > h2, .footer__services > h2
+    {
+        text-align: start;
+    }
+    .footer__more > p
+    {
+        padding: 0.7rem 3rem;
+        text-align: center;
+
+    }
+    
+}

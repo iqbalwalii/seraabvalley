@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/seraabvalley.com/static/css/main.e10c60e9.chunk.css",
-    "main.js": "/seraabvalley.com/static/js/main.7dfac59b.chunk.js",
-    "main.js.map": "/seraabvalley.com/static/js/main.7dfac59b.chunk.js.map",
+    "main.css": "/seraabvalley.com/static/css/main.b79c6c9f.chunk.css",
+    "main.js": "/seraabvalley.com/static/js/main.3d33713e.chunk.js",
+    "main.js.map": "/seraabvalley.com/static/js/main.3d33713e.chunk.js.map",
     "runtime-main.js": "/seraabvalley.com/static/js/runtime-main.cdc6bfe9.js",
     "runtime-main.js.map": "/seraabvalley.com/static/js/runtime-main.cdc6bfe9.js.map",
     "static/js/2.c6b080da.chunk.js": "/seraabvalley.com/static/js/2.c6b080da.chunk.js",
     "static/js/2.c6b080da.chunk.js.map": "/seraabvalley.com/static/js/2.c6b080da.chunk.js.map",
     "index.html": "/seraabvalley.com/index.html",
-    "static/css/main.e10c60e9.chunk.css.map": "/seraabvalley.com/static/css/main.e10c60e9.chunk.css.map",
+    "static/css/main.b79c6c9f.chunk.css.map": "/seraabvalley.com/static/css/main.b79c6c9f.chunk.css.map",
     "static/js/2.c6b080da.chunk.js.LICENSE.txt": "/seraabvalley.com/static/js/2.c6b080da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.cdc6bfe9.js",
     "static/js/2.c6b080da.chunk.js",
-    "static/css/main.e10c60e9.chunk.css",
-    "static/js/main.7dfac59b.chunk.js"
+    "static/css/main.b79c6c9f.chunk.css",
+    "static/js/main.3d33713e.chunk.js"
   ]
 }

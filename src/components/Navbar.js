@@ -43,7 +43,7 @@ const Navbar = ({ cartItems }) => {
                 <div className='brand'>
                     <img  className='logo' src="/assets/images/irfan.svg" alt=""/>
                     <h1 className="logo__heading" >
-                    <Link to="/" className='navigation__text'>Serab valley <span>The Taste of kashmir</span></Link>
+                    <Link to="/" className='navigation__text'>Seraab valley <span>The Taste of kashmir</span></Link>
                     </h1>
                 </div>
                 <div className='hamburger' onClick={()=>{navbartoggle()}}>

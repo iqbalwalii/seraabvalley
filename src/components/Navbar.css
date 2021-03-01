@@ -145,7 +145,7 @@ a {
 {
     display: flex;
 }
-@media only screen and (max-width: 640px)
+@media only screen and (max-width: 768px)
 {
     .hamburger
     {
@@ -172,3 +172,11 @@ a {
     }
 
 }
+
+/* @media only screen and (min-width: 481px) and (max-width : 768px)
+{
+    .navbar{
+        padding-top: 1rem;
+
+    }
+} */

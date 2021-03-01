@@ -81,9 +81,51 @@
 }
 .info{
     display: none;
+    margin-top: 0;
 }
 
 
 
+
+}
+
+@media only screen and (min-width: 481px) and (max-width : 768px)
+{
+    .product__banner
+    {
+        flex-wrap: wrap;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        width: initial;
+        padding-bottom: 0rem;
+    }
+    .info{
+        margin-top: 3rem;
+        width: 100%;
+        padding-bottom: 0;
+       
+    }
+    .info h2{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .info> p{
+        padding-top: 1rem;
+        text-align: center;
+        font-size: 1rem;
+    }
+    
+    .product__banner:nth-of-type(odd) > .info{
+    
+        text-align:left;
+        order:0;
+        margin-right:10px;
+        
+    }
+    .product__banner:nth-of-type(odd) .banner__backdrop {
+        left:0%;
+    }
+  
 
 }

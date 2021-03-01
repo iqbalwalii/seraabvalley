@@ -75,3 +75,11 @@
 
 
 }
+@media only screen and (min-width: 481px) and (max-width : 768px)
+{
+    .view__more__btn 
+    {
+        width: 40%;
+        font-size: 0.8rem;
+    }
+}

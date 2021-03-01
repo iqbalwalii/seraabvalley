@@ -35,7 +35,7 @@
     line-height: 30px;
 }
 
-@media only screen and (max-width : 640px)
+@media only screen and (max-width : 480px)
 {
     .banner{
         display: flex;
@@ -59,4 +59,12 @@
 
     
 
+}
+@media only screen and (min-width: 481px) and (max-width : 768px)
+{
+    .banner img
+    {
+        margin-left: -150px;       
+        width: 50vw;
+    }
 }

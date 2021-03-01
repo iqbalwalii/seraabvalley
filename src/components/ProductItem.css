@@ -7,7 +7,6 @@
     background: rgba(255, 255, 255, 0.733);
     border-radius: 20px;
     position: relative;
-    height: fit-content;
     padding: 20px 0px;
     width: 20vw;
     margin-right: 30px;
@@ -144,4 +143,44 @@
         width: 30%;
     }
 
+}
+@media only screen and (min-width: 481px) and (max-width : 768px)
+{
+   .product__banner .product
+   {
+       width: 42%;
+       margin: 0 0;
+
+   }
+   .product__banner .product:nth-of-type(odd)
+   {
+       margin-left: 2.4rem;
+   }
+   .product__banner .product__image > img
+   {
+        height: initial;
+   }
+   .product__banner .product__details
+   {
+       width: initial;
+   }
+   .product__banner .product__name
+   {
+        font-size: 1rem;
+   }
+   .product__banner .product__price > span
+   {
+       font-size: 0.9rem;
+   }
+   .product__banner .detail__btn
+   {
+        left: -5%;
+        width: 4.5rem;        
+}
+.product__banner .cart__btn:hover > span {
+    display: none;
+    /* margin-right: 10px; */
+}
+
+ 
 }

@@ -88,6 +88,7 @@
         height: 140vh;
         background: rgba(160, 160, 160, 0.219);
     }
+    
     .hero__heading
     {
         padding: 1rem 0px;
@@ -108,19 +109,36 @@
         right: 0%;
        
     }
-    .contact__form__data
-    {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: fit-content;
-        margin: auto;
-
-    }
     .contact__heading
     {
         font-size: 1.5rem;
     }
    
 }
- 
+
+@media only screen and (min-width: 481px) and (max-width : 768px)
+{
+    .contact__hero {
+        height: 98vh;
+    }
+    .contact__hero > .description
+    {
+        padding: 0;
+        background: transparent;
+    }
+    .contact__hero 
+    {
+        justify-content: space-between;
+    }
+    .contact__hero > div.description > .hero__heading{
+        font-size: 1.2rem;
+        padding: 20px;
+    }
+    .contact__form{
+        padding: .5rem
+    }
+    .contact__form .backdrop__form{
+        right: 0%;
+        z-index: -99;
+    }
+}

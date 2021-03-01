@@ -169,7 +169,57 @@ margin-top:3rem;
     font-size: 2rem;
     
 }
-.about__team .profile{
-
 }
+
+@media only screen and (min-width: 481px) and (max-width : 768px)
+{
+    .about__section{
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    .about__section > .about__text{
+font-size: 2rem;
+position: absolute;
+padding: 1rem;
+color:rgb(235, 235, 235);
+text-shadow: 2px 2px #000;
+    }
+    .about__work__description > p
+    {
+        padding:3rem;
+    }
+    .two__paras > div
+    {
+        padding: 1.6rem;
+    }
+    .about__team > div
+    {
+        padding: 1rem;
+        width: 40%;
+        margin: 0;
+    }
+    .about__team
+    {
+        justify-content: space-evenly;  
+        margin-bottom: 2rem;
+
+    }
+    .profile >h2
+    {
+        font-size: 1rem;
+        opacity: .8;
+    }
+    .profile >h4
+    {
+        font-size: .9rem;
+        opacity: .7;
+        margin: .5rem auto;
+    }
+    .profile >p
+    {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+
 }
