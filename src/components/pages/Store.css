@@ -30,7 +30,32 @@
     width: 100%;
     height: 500px;
 }
-@media only screen and (mix-width: 481px) and (max-width: 768px)
+@media only screen and (min-width: 481px) and (max-width: 768px)
 { 
-
+    .store__container {
+       
+        grid-template-columns: repeat(2, 38vw);
+        grid-template-rows: auto;
+        grid-row-gap: 80px;
+        place-items: stretch;
+     
+    }
+   
+    .store__container  .product{
+        margin-right: 0;
+        width: inherit;
+    }
+    .store__container  .product__details{
+        margin-right: 0;
+        width:initial;
+    }
+    .store__container .product__image > img {
+        height: initial;
+        width: 100%;
+    }
+    .cart__btn:hover > span {
+        display: none;
+        /* margin-right: 10px; */
+    }
+    
 }

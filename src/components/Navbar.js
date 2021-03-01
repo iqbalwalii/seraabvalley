@@ -27,16 +27,16 @@ const Navbar = ({ cartItems }) => {
         console.log(navbar);
         navbar.classList.toggle('display');
     }
-    // window.onscroll = function () {
-    //     if (
-    //         document.body.scrollTop >= 200 ||
-    //         document.documentElement.scrollTop >= 200
-    //     ) {
-    //         addBg();
-    //     } else {
-    //         removeBg();
-    //     }
-    // };
+    window.onscroll = function () {
+        if (
+            document.body.scrollTop >= 200 ||
+            document.documentElement.scrollTop >= 200
+        ) {
+            addBg();
+        } else {
+            removeBg();
+        }
+    };
     return (
         <nav className="navbar">
             <div className="navbar__logo">
