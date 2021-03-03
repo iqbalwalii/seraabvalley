@@ -1,10 +1,26 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Banner from '../Banner'
+import valley from '../../api/valley'
+
 import './Contact.css'
 
 const Contact = () => {
+    const [values, setValues] = useState('');
+    const onSubmitHandler = event => {
+        event.preventDefault();
+       valley.post('/contact', {
+                ...values,
+            })
+            .then(result => console.log(result))
+            .catch(result => console.log(result));
+    };
+    const onChangeHandler = event => {
+        setValues(prevState => {
+            return { ...prevState, [event.target.name]: event.target.value };
+        });
+    };
     return (
         <div>
             <Navbar/>
@@ -18,10 +34,14 @@ const Contact = () => {
                     <h2 className="contact__heading">CONTACT US</h2>
                     <div className="backdrop__form">
 </div>
-                    <form action="#" method='POST' className='contact_form_data'>
-                        <input className='contact__text' type="text" placeholder='Enter Your Name'/>
-                        <input className='contact__text' type="email" required='required' placeholder='Enter Your Email'/>
-                        <textarea className='contact__text' placeholder='Message Description' name="" id="" cols="30" rows="10"></textarea>
+                    <form  onSubmit={onSubmitHandler}  className='contact_form_data'>
+                        <input className='contact__text' type="text"   value={values.name}
+                            placeholder="Enter Your Name"
+                            onChange={onChangeHandler}/>
+                        <input className='contact__text' type="email" required='required'   value={values.email}
+                            placeholder="Enter Your Email"
+                            onChange={onChangeHandler}/>
+                        <textarea className='contact__text' placeholder='Message Description'  onChange={onChangeHandler} name="" id="" cols="30" rows="10"></textarea>
                         <input className='contact_form_submit' type="submit" value="Send"/>
                     </form>
                 </div>

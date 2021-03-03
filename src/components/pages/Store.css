@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Stick&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 *
 {
@@ -25,12 +25,15 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-height: 80vh;
+height: 90vh;
 margin-top: 5rem ;
 }
 .carousel__image
 {
   position: relative;
+  width: 100vw;
+  height: inherit;
+  object-fit: cover;
   
 }
 .carousel__heading
@@ -38,7 +41,6 @@ margin-top: 5rem ;
     position: absolute;
     color: #fff;
     font-size: 2rem;
-    font-family: 'Stick', sans-serif;
     text-shadow: 1px 1px black;
     text-align: center;
 }
@@ -51,12 +53,14 @@ margin-top: 5rem ;
     font-family: 'Krona One', sans-serif;
     padding: 1rem;
     margin: 2rem auto;
+    margin-bottom: 0;
 }
 @media only screen and (max-width: 480px){
     .store__container {
-       padding-top: 0;
+       
         grid-template-columns: 1fr;
         place-items: stretch;
+        padding-top: 0;
      
     }
     .cart__btn:hover > span {
@@ -79,7 +83,11 @@ margin-top: 5rem ;
     {
         height: inherit;
     }
-} 
+    .store__heading
+{
+    font-size: 1.5rem;
+}
+}
 @media only screen and (min-width: 481px) and (max-width: 770px)
 { 
     .store__container {
@@ -88,6 +96,7 @@ margin-top: 5rem ;
         grid-template-rows: auto;
         grid-row-gap: 80px;
         place-items: stretch;
+       
      
     }
    

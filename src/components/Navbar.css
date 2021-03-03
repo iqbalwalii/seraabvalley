@@ -8,21 +8,28 @@
     left: 0;
     width: 100vw;
     z-index: 100;
-    padding-bottom: 1rem;
+    padding: .5rem 5rem 1rem 2rem;
    
+}
+.basket{
+    position: relative;
+}
+.basket__icon{
+    width: 35px;
+}
+.username{
+    font-size: 1rem;
 }
 nav .cart__total {
     display: inline-block;
     text-align: center;
-    padding: 5px;
-    width: 30px;
-    border-radius: 20%;
-    background-color: #fff;
-    color: #000;
-    border: 2px solid #4b90ff;
-    font-size: 1rem;
-    height: 30px;
-    margin: 2px
+    
+    font-size: 1rem; 
+    margin: 2px;
+    position: absolute;
+    right: 40%;
+    top: 30%;
+    color: #fff;
 }
 
 .active {
@@ -56,28 +63,12 @@ a {
     transition: all .5s ease-out;
 
 }
-/* .navbar__links > *::after
-{
-    content: '';
-    display:block;
-    background-color: #be3d68;
-    height: 2px;
-    width:0px;
-    position: absolute;
-    bottom: 0;
-    left: 3%;
-    margin-left: 3%;
-    transition: all 1s ease-out;
-} */
-/* .navbar__links > *:hover
-{
-   color: #be3d68;
-} */
+
 .logo
 {
     display: inline;
     outline: none;
-   height: 8vh;
+   height: 7vh;
 }
 /* .navbar__links > *:hover::after
 {
@@ -146,7 +137,11 @@ a {
 {
     display: flex;
 }
-@media only screen and (max-width: 768px)
+.cart__total
+{
+    height: 100px;
+}
+@media only screen and (max-width:900px)
 {
     .hamburger
     {

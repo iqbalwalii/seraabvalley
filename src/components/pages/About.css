@@ -132,6 +132,7 @@
     }
     .about__text
 {
+    text-align: center;
     font-size: 1.3rem;
     position: absolute;
     color: #fff;
@@ -139,7 +140,8 @@
 }
 .about__image
 {
-    height: 60vh;
+    width: 100%;
+    height: initial;
     position: relative;
 }
 .about__work__description h2{

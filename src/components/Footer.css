@@ -119,5 +119,10 @@ h2>span{
         text-align: center;
 
     }
+    .footer__more, .footer__heading1
+{
+    width: 100vw;
+    text-align: center;
+}
     
 }

@@ -13,6 +13,12 @@
     animation: load_form 2s linear;
 
 }
+.user__message
+{
+    color: red;
+    text-align: center;
+    text-transform: capitalize;
+}
 .form__main
 {
     display: flex;
@@ -28,11 +34,12 @@
 {
     padding: 0.7rem;
     width: 30vw;
-    margin-top: 1rem;
     font-size: 0.9rem;
     border: none;
     outline: none;
     border-radius: 10px;
+    margin: auto;
+    margin-top: 2rem;
 }
 .form__main > button
 {

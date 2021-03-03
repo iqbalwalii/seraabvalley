@@ -14,9 +14,11 @@ const selectedItemReducer = (selectedItem = [], action) => {
 const userReducer = (state = {}, action) => {
     if (action.type === 'USER__AUTHENTICATION') {
         return action.payload;
-    } else {
-        return state;
+    } 
+    if (action.type === 'LOGOUT__USER') {
+        return action.payload;
     }
+    return state;
 };
 
 const fetchPostsReducer = (state = [], action) => {

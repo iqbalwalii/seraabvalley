@@ -40,13 +40,13 @@ To be the most influential distributor in Asia.</p>
                 <h3 className='about__description'>OUR TEAM</h3>
                 <div className="about__team">
                     <div className="profile">
-                        <img className='profile__photo'src="https://i.pinimg.com/originals/43/b1/d6/43b1d6e87417aa6287602dd9e0cb6f4a.jpg" alt=""/>
+                        <img className='profile__photo'src="https://www.rayyforce.com/wp-content/uploads/2019/11/dummy-profile.jpg" alt=""/>
                         <h2 className='profile__name'>Zaffar Abbas</h2>
                         <h4 c>Managing Director</h4>
                         <p>md@seraabvalley.com</p>
                     </div>
                     <div className="profile">
-                        <img className='profile__photo' src="https://i.pinimg.com/736x/70/f6/c7/70f6c74cddbc35074dfa93aa9a33b4a8.jpg" alt=""/>
+                        <img className='profile__photo' src="https://www.rayyforce.com/wp-content/uploads/2019/11/dummy-profile.jpg" alt=""/>
                         <h2 className='profile__name'>Dilawar Hussain</h2>
                         <h4 className='profile__name'>Director</h4>
                         <p>director@seraabvalley.com</p>

@@ -17,7 +17,7 @@ const SingleProduct = (props) => {
         <div className="single__product__item">
             <div className="product__item__top">
             
-                <img src={product.imageUrl} alt={product.name} className="product__img" />
+                <img src={`/assets/images/products/${(product.name).trim()}.jpg`} alt={product.name} className="product__img" />
                 <div className="single__product__detials">
                     <h1 className="single__product__name">{product.name}</h1>
                     <h3 className="single__product__description">

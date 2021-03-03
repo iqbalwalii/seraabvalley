@@ -7,13 +7,21 @@ export const selectItem = item => {
         type: 'SELECT__ITEM',
         payload: item,
     };
-};export const removeItem = item => {
+};
+export const removeItem = item => {
     console.log('in action remove');
     console.log(item);
     return {
         type: 'REMOVE__ITEM',
         payload: item,
     };
+};
+export const logout = () => {
+    return {
+        type: 'LOGOUT__USER',
+        payload: '',
+    }
+   
 };
 
 export const fetchProducts = () => {

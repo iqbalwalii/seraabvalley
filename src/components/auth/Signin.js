@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {useHistory} from 'react-router-dom'
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loginUser } from '../../redux/actions';import useFormValidation from './useFormValidation';
@@ -14,18 +14,10 @@ const INITIAL_FORM_STATE = {
     name: '',
     password: '',
 };
-// 
-// const loginUser = async userData => {
-//     console.log('performing creation with data as: ', userData)
-//     try {
-//         const reponse = await axios.post('https://ancient-inlet-41931.herokuapp.com//user/read', {...userData});
-//         console.log(reponse);
-//     } catch (error) {
-//         console.log(error, 'errrrrrrrr');
-//     }
-// };
 
-const Login = ({ loginUser, user, history }) => {
+
+const Login = ({ loginUser, user}) => {
+    const history = useHistory();
     const {
         values,
         isSubmitting,
@@ -49,7 +41,7 @@ const Login = ({ loginUser, user, history }) => {
 <div className="backdrop__form">
 </div>
 <div className='form__data'>
-<h1 className="form__heading">Sign in</h1>
+<h1 className="form__heading">SIGN IN</h1>
 <form onSubmit={onSubmitHandler} className='form__main'>
 <input
     type="email"
@@ -76,11 +68,11 @@ const Login = ({ loginUser, user, history }) => {
 <button type="submit" >SIGN IN</button>
 </form>
 <Link to="/Signup" className='change__over' onClick={toggleForm}>Don't Have an Account</Link>
-<h1>
+<h1 className='user__message'>
                 {user.message
                     ? user.message
                     : user.email
-                    ? history.push(history.location.state)
+                    ? history.push('/')
                     : ''}
             </h1>
 </div>

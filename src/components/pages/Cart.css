@@ -41,6 +41,7 @@
 {
     margin-left: 4rem;
     text-align: center;
+    height: fit-content;
 }
 
 
@@ -207,7 +208,7 @@ hr
     }
     .cart__total
     {
-        margin: 5rem  0rem;
+        margin: 1rem  auto;
     }
     .cart__item__name
     {
@@ -246,3 +247,5 @@ and (max-width : 920px) {
         font-size: .8rem;
     }
 } */
+@media only screen and (min-width: 800px) and (max-width : 1000px)
+{}

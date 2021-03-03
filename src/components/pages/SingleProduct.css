@@ -8,9 +8,7 @@
         .product__item__top
         {
             padding-bottom: 2%;
-            justify-content: space-evenly;
             width: 100%;
-            margin: 0 auto;
             padding-top:20vh;
             
         }
@@ -18,11 +16,14 @@
         .product__img
         {
             outline: none;
-            margin-left: 40vw;
+            margin: auto;
             box-shadow: 2px 3px 10px 10px rgba(121, 121, 121, 0.226);
             padding: 1px 0px;
             border-radius: 5%;
-            
+            margin: auto;
+            width: 30%;
+            height: 30%;
+            margin-left: 35%;
         }
         .single__product__detials
         {
@@ -48,7 +49,7 @@
         }
         .product__item__bottom
         {
-        
+            display: flex;
             margin: 10px auto
         
         }
@@ -64,9 +65,10 @@
         }
         .product__item__bottom > div > p
         {
-            font-size: 1rem;
+            font-size: 1.3rem;
             margin-top: 10px;
             text-align:center;
+            padding: 2rem;
         }
         .single__product__description
         {
@@ -129,7 +131,9 @@
             border-bottom: 2px solid rgba(97, 160, 243, 0.473);
             width: 40%;
             margin: auto;
+            font-size: 1.8rem;
         }
+ 
 
 @media only screen and (max-width:480px)
 {
@@ -153,9 +157,10 @@
     
     .product__img
     {
-        width: 60vw;
-        outline: none;
+        width: 40vw;
         margin:auto;
+        margin-left: 30vw;
+        outline: none;
         box-shadow: 2px 3px 10px 20px rgba(121, 121, 121, 0.226);
         padding: 1px 0px;
         border-radius: 5%;
@@ -223,6 +228,7 @@
         justify-content: space-between;
         flex-direction: column;
         padding: 0rem 1rem ;
+        width: 80vw;
         
     }
     .detail__group
@@ -246,6 +252,7 @@
         font-size: 0.9rem;
     }
     .product__item__bottom{
+        flex-direction: column;
         padding: 1rem 2rem;
         
     }
@@ -284,17 +291,7 @@
             padding-top:20vh;
             
         }
-        
-        .product__img
-        {
-            width: 40vw;
-            outline: none;
-            margin:auto;
-            box-shadow: 2px 3px 10px 10px rgba(121, 121, 121, 0.226);
-            padding: 1px 0px;
-            border-radius: 5%;
-            
-        }
+    
         .single__product__detials
         {
             margin: 1rem auto;
@@ -364,6 +361,7 @@
             justify-content: space-between;
             flex-direction: column;
             padding: 0rem 1rem ;
+            width: 100%;
             
         }
         .detail__group

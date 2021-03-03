@@ -1,4 +1,7 @@
-import React from 'react'
+import React from 'react';
+import{ logout }from '../redux/actions/index';
+import { FaCartArrowDown } from 'react-icons/fa';
+
 import { connect } from 'react-redux';
 import {Link, useLocation} from 'react-router-dom';  
 import './Navbar.css'   
@@ -17,7 +20,7 @@ function removeBg() {
     myNav.classList.remove('nav-colored');
 }
 
-const Navbar = ({ cartItems }) => {
+const Navbar = ({ cartItems, user, logout}) => {
     const location = useLocation();
 
  
@@ -41,9 +44,9 @@ const Navbar = ({ cartItems }) => {
         <nav className="navbar">
             <div className="navbar__logo">
                 <div className='brand'>
-                    <img  className='logo' src="/assets/images/irfan.svg" alt=""/>
+                    <img  className='logo' src="/assets/images/logo.png" alt=""/>
                     <h1 className="logo__heading" >
-                    <Link to="/" className='navigation__text'>Seraab valley <span>The Taste of kashmir</span></Link>
+                    <Link to="/" className='navigation__text'>Seraab valley <span>The Taste of Kashmir</span></Link>
                     </h1>
                 </div>
                 <div className='hamburger' onClick={()=>{navbartoggle()}}>
@@ -72,34 +75,44 @@ const Navbar = ({ cartItems }) => {
                 >
                     Contact 
                 </Link>
-                <Link
-                    to="/cart"
-                    className={location.pathname === '/cart' ? 'active' : 'inactive'}
-                >
-                    Basket <span className="cart__total"> {cartItems.length}</span>
-                </Link>
-                <Link
-                    to="/Signup"
-                    className={location.pathname === '/Signup' ? 'active' : 'inactive'}
-                >
-                    Signup
-                </Link>
-                <Link
-                    to="/Signin"
+                
+                {
+                    user.name ? <>
+                        <h2 className ="username">{user.name}</h2><button onClick={logout}>Logout</button>
+                    </> : <>
+                    <Link
+                    to="/signin"
                     className={location.pathname === '/Signin' ? 'active' : 'inactive'}
                 >
                     Signin
                 </Link>
+                <Link
+                    to="/signup"
+                    className={location.pathname === '/Signup' ? 'active' : 'inactive'}
+                >
+                    Signup
+                </Link></>
+                   
+                
+                }<Link
+                
+                    to="/cart"
+                    className={ location.pathname === '/cart' ? 'basket active' : 'basket  inactive'}
+                >
+                   <img src="/assets/images/basket.png" alt="basket icon" className="basket__icon"/>
+                    <span className="cart__total"> {cartItems.length}</span>
+                </Link>
             </div>
                
         </nav>
+
     )
 }
 
 const mapStateToProps = state => {
     return {
-        cartItems: state.selectedItem,
+        cartItems: state.selectedItem, user:state.user
     };
 };
 
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps, {logout})(Navbar);

@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import products from '../data';
 import { FaCartPlus} from 'react-icons/fa';
 import './ProductItem.css';
 
@@ -10,7 +9,7 @@ const ProductItem = ({item, selectItem}) => {
     return (
         <div className='product'>
             <div className="product__image">
-                <img src={item.imageUrl} alt={item.name}/>
+                <img src={`/assets/images/products/${(item.name).trim()}.jpg`} alt={item.name}/>
             </div>
             <div className="product__details">
                 <h1 className="product__name">
@@ -34,7 +33,7 @@ const ProductItem = ({item, selectItem}) => {
             }>
                <span>Add to Basket</span> <FaCartPlus style={{'fontSize': '1rem'}} /> 
             </button> 
-            <Link to={{ pathname: `/product:${item?.id}`, state: item }} className='cart__btn detail__btn'>
+            <Link to={{ pathname: `/product:${item?.name}`, state: item }} className='cart__btn detail__btn'>
                    Details
             </Link>    
 

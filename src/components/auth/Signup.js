@@ -12,17 +12,6 @@ const INITIAL_FORM_STATE = {
     name: '',
     password: '',
 };
-// 
-const createUser = async userData => {
-    // console.log('in create user: ', userData);
-    // try {
-    //     const reponse = await valley.post('/user/read', userData);
-    //     console.log(reponse);
-    // } catch (error) {
-    //     console.log(error, 'errrrrrrrr');
-    // }
-};
-
 const Signup = ({ userAuthentication, user, history }) => {
     const {
         values,
@@ -85,7 +74,7 @@ const Signup = ({ userAuthentication, user, history }) => {
                 </form>
                     <Link to="/Signin" className='change__over' onClick={toggleForm}>Already Have an Account</Link>
                     <h1>
-                {user.message ? user.message : user.email ? history.push('/cart') : ''}
+                {user.message ? user.message : user.email ? history.push('/') : ''}
             </h1>
             </div>
         </div>
