@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/seraabvalley.com/static/css/main.b79c6c9f.chunk.css",
-    "main.js": "/seraabvalley.com/static/js/main.3d33713e.chunk.js",
-    "main.js.map": "/seraabvalley.com/static/js/main.3d33713e.chunk.js.map",
-    "runtime-main.js": "/seraabvalley.com/static/js/runtime-main.cdc6bfe9.js",
-    "runtime-main.js.map": "/seraabvalley.com/static/js/runtime-main.cdc6bfe9.js.map",
-    "static/js/2.c6b080da.chunk.js": "/seraabvalley.com/static/js/2.c6b080da.chunk.js",
-    "static/js/2.c6b080da.chunk.js.map": "/seraabvalley.com/static/js/2.c6b080da.chunk.js.map",
-    "index.html": "/seraabvalley.com/index.html",
-    "static/css/main.b79c6c9f.chunk.css.map": "/seraabvalley.com/static/css/main.b79c6c9f.chunk.css.map",
-    "static/js/2.c6b080da.chunk.js.LICENSE.txt": "/seraabvalley.com/static/js/2.c6b080da.chunk.js.LICENSE.txt"
+    "main.css": "/static/css/main.4a0cb778.chunk.css",
+    "main.js": "/static/js/main.5a2dce66.chunk.js",
+    "main.js.map": "/static/js/main.5a2dce66.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.90e951dd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.90e951dd.js.map",
+    "static/js/2.c6b080da.chunk.js": "/static/js/2.c6b080da.chunk.js",
+    "static/js/2.c6b080da.chunk.js.map": "/static/js/2.c6b080da.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.4a0cb778.chunk.css.map": "/static/css/main.4a0cb778.chunk.css.map",
+    "static/js/2.c6b080da.chunk.js.LICENSE.txt": "/static/js/2.c6b080da.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.cdc6bfe9.js",
+    "static/js/runtime-main.90e951dd.js",
     "static/js/2.c6b080da.chunk.js",
-    "static/css/main.b79c6c9f.chunk.css",
-    "static/js/main.3d33713e.chunk.js"
+    "static/css/main.4a0cb778.chunk.css",
+    "static/js/main.5a2dce66.chunk.js"
   ]
 }

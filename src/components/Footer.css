@@ -15,8 +15,8 @@ span{
 
 ul li{
     list-style: none;
-    font-size: 1rem;
-    padding-top: 0.9rem;
+    font-size: 1.1rem;
+    padding-top: 1rem;
 }
 
 .footer__heading
@@ -37,11 +37,16 @@ h2>span{
     display: block;
     font-size: 0.9rem;
 }
-.footer__heading
-{
-    text-align: center;
-}
 
+.footer__more
+{
+    width: 30vw;
+}
+.footer__more p{
+    margin-top: 1rem;
+    font-size: 1.1rem;
+   
+}
 
 @media only screen and (max-width : 480px)
 {
@@ -72,9 +77,20 @@ h2>span{
         width: 100vw;
         height: 80%;
     }
-    .footer__more p{
-        margin-top: 1rem;
+    .footer__more {
+        width: 100%;
+    }
+   
+    .contact__hero
+    {
+        padding-top: 0;
+    }
+    .footer__heading
+    {
         text-align: center;
+    }
+    .footer__more p{
+        text-align: center;     
     }
 }
 @media only screen and (min-width: 481px) and (max-width : 768px)

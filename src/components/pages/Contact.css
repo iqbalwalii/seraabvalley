@@ -9,14 +9,14 @@
 }
 .description
 {
-    background-color: #f0f0f0;
+    background: transparent;
     width: 50vw;
     text-align: center;
     font-family: 'Akaya Telivigala', cursive;
     font-size: 0.7rem;
     padding: 3rem;
     padding-top: 0%;
-    z-index: -20;
+    z-index: 1;
 
 }
 .contact_form_data
@@ -75,6 +75,10 @@
 .hero__heading
 {
     padding: 2rem 4rem;
+}
+.contact__form .backdrop__form
+{
+    right: 0%;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media (max-width : 480px)

@@ -37,7 +37,6 @@
 }
 .info{
     margin-right: 0;
-    font-size: 1.5rem;
     padding: 2rem;
     justify-content: center;
     /* align-items: center; */
@@ -50,12 +49,13 @@
 }
 
 .info > h2{
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0;
 }
 .info > p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     line-height: 25px;
+    opacity: .9;
 }
 
 .product__banner:nth-of-type(odd) > .info{

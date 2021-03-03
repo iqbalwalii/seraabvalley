@@ -22,7 +22,7 @@ const Footer = () => {
                     <li>Saida Kadal </li>
                     <li>Rainawari</li>
                     <li>Srinagar J&K</li>
-                    <li>190021</li>
+                    <li>190003</li>
                 </ul>
             </div>
             <div className='footer__more main'>
