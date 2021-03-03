@@ -12,7 +12,7 @@
     margin-right: 30px;
     box-shadow: 1px 1px 20px 20px rgba(128, 128, 128, 0.119);
     transition: all 0.3s ease-out;
-    height: 65vh;
+    /* height: 65vh; */
     
 }
 
@@ -190,20 +190,3 @@
 
  
 }
-
-/* @media only screen
-and (min-width : 770px) {
- .product{
-     margin-right: 0;
-     height: 55vh;
-     width: 35vw;
-     margin: 2rem;
- }
- .product__details {
-    width: 100%;
-}.product__price span{
-    font-size: 1rem;
-
-}
-
-}  */

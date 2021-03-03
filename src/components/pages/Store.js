@@ -44,20 +44,11 @@ const Store = ({productsList, selectItem, fetchProducts}) => {
     return (
         <>
             <Navbar />
-            {/* <div className="carousel">
-                <div className="carousel__slider">
-                    <img src="/assets/images/carousel6.jpg" id='lastClone'alt=""/>
-                    <img src="/assets/images/carousel1.jpg" alt=""/>
-                    <img src="/assets/images/carousel2.jpg" alt=""/>
-                    <img src="/assets/images/carousel3.jpg" alt=""/>
-                    <img src="/assets/images/carousel4.jpg" alt=""/>
-                    <img src="/assets/images/carousel5.jpg" alt=""/>
-                    <img src="/assets/images/carousel6.jpg" alt=""/>
-                    <img src="/assets/images/carousel1.jpg" id='firstClone' alt=""/>
-                </div>
-            </div>
-            <button id='prevBtn'>Prev</button>
-            <button id='nextBtn'>Next</button> */}
+        <div className="carousel">
+        <img src="./assets/images/pro.gif" alt="Product Line" className="carousel__image"/>
+            <h3 className='carousel__heading'>Browse the treats we have in store for you</h3>
+        </div>
+        <h2 className='store__heading'>Our Listings</h2>
             <div className="store__container">
                 {productsList.map(item => {
                     return <ProductItem item={item} selectItem={selectItem} />;
