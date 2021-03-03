@@ -4,7 +4,7 @@ import {selectItem} from '../redux/actions'
 import './ProductBanner.css';
 import { connect } from 'react-redux';
 
-const ProductBanner = ({productItems, selectItem}) => {
+const ProductBanner = ({productItems, selectItem, text, heading}) => {
     return (
         <div className="product__banner">
             <div className="banner__backdrop"></div>
@@ -12,9 +12,9 @@ const ProductBanner = ({productItems, selectItem}) => {
                 return <ProductItem item={item} selectItem={selectItem}/>
             })}
             <div className="info">
-                <h2>Lorem ipsum dolor sit amet.</h2>
+                <h2>{heading}</h2>
                 <p className="item__detail">
-                      Lorem . Deserunt non voluptas veniam ipsa cumque eaque aliquam tempore quis a? Perspiciatis suscipit deserunt ea eum consequatur?  
+                    {text}
                 </p>
             </div> 
         </div>
