@@ -3,7 +3,7 @@
     text-transform: uppercase;
     text-align: center;
     position: relative;
-
+margin-bottom: 2rem;
 }
 .main__heading::after{
     content:'';
