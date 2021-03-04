@@ -2,6 +2,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import {Homepage, About, Cart, Contact, Store,SingleProduct} from './components';
 import Signup from'./components/auth/Signup'
 import Signin from'./components/auth/Signin'
+import PaymentForm from '../src/components/pages/paymentForm'
 import './App.css';
 import axios from 'axios';
 
@@ -19,6 +20,7 @@ function App() {
       <Route exact path={'/product:id'} component={SingleProduct}/>
       <Route exact path={'/Signup'} component={Signup}/>
       <Route exact path={'/Signin'} component={Signin}/>
+      <Route exact path={'/pay'} component={PaymentForm}/>
     </Switch>
       
     </BrowserRouter>

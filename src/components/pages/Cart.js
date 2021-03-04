@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Navbar from '../Navbar'
 import { connect } from 'react-redux';
 // import CartItem from '../CartItem';
@@ -7,29 +7,55 @@ import { removeItem } from '../../redux/actions'
 import Footer from '../Footer'
 import './Cart.css'
 import CartItem from '../CartItem';
+import { Link } from 'react-router-dom';
 
-const Cart = ({ cartItems, productsList, removeItem }) => {
-console.log('items',cartItems, productsList, removeItem )
+const Cart = ({ cartItems, productsList, removeItem }) => {  
+    // let values = {}    
+    const [values, setValues] = useState({});
+    const [cartTotal, setcartTotal] = useState(0);
+    const onChangeHandler = (e) => {
+        console.log('cartValues', e.target)
+        setValues({...values, [e.target.name]: e.target.id});
+    }
+    const onDeleteHandler = (name) => {
+        console.log('Clicked on: ', name); 
+        let temp = {...values};
+        console.log(temp);
+        delete temp[`${name}`];
+        console.log('afterdelete', temp);
+        setValues(temp)
+        return;
+    }
+useEffect(() => {
+    setcartTotal(Object.values(values).reduce((accumulator, currentValue) => Number(accumulator) + Number(currentValue), 0));
+    console.log(values)
+   
+}, [values])
+
     const match = cartItems.map(cartItem => {
         return productsList.filter(product => product._id === cartItem);
     }).reduce((acc, currentValue) => {
         return (acc = [...acc, ...currentValue]);
     }, []);
-    console.log('IN store',match);
+
     return (
         <div>
             <Navbar />
-            <div className="cart__main ">
-                <div className="cart__items">
-                {match.map(item => (
-                        <CartItem item={item} removeItem={removeItem} />
-                    ))}                   
-                </div>
-                <div className="cart__total">
-                    <h2>Subtotal ({match.length} items) <span>&#8377; 23232</span></h2>
-                    <button className='checkout__btn'>Proceed to checkout</button>
-                </div>
-            </div>
+           {
+               cartItems &&  <div className="cart__main ">
+               <div className="cart__items">
+               {match.map(item => (
+                       <CartItem item={item} removeItem={removeItem} onChangeHandler = {onChangeHandler} onDeleteHandler = {onDeleteHandler}/>
+                   ))}                   
+               </div>
+               <div className="cart__total">
+                   <h2>Subtotal ({match.length} items) <span>&#8377; {cartTotal}</span></h2>
+                {
+                    cartTotal?  <Link to={{pathname:'/pay', state:{values}}}className='checkout__btn'>Proceed to checkout</Link>: <div style={{marginTop: '20vh'}}>your cart is empty please go to store</div>
+                }   
+               </div>
+           </div>
+           }
     
         </div>
     )

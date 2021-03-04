@@ -19,6 +19,7 @@
 }
 .username{
     font-size: 1rem;
+    pointer-events: none;
 }
 nav .cart__total {
     display: inline-block;

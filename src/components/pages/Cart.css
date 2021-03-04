@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-around;
-    margin: auto;
+    /* margin: auto; */
     width: 80vw;
     align-items: flex-start;
     padding-top: 20vh;
@@ -24,14 +24,14 @@
 .cart__item
 {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         border: 1px solid rgba(0, 0, 0, 0.2);
         justify-content: space-evenly;
         margin-bottom: 2rem;
         padding: 1.2rem;
         border-radius: 10px;
         width: 100%;
-        height: 34vh;
+        /* height: 34vh; */
     
     
 }
@@ -103,7 +103,7 @@ hr
 .checkout__btn:visited
 {
     background-color: #1e90ff;
-    padding:20px;
+    padding:5px;
     border-radius: 20px;
     border-bottom-right-radius:0px;
     color: #fff;
@@ -112,13 +112,12 @@ hr
     margin: 5rem auto;
     cursor: pointer;
     font-weight: bolder;
-    font-size: 1.1rem;
+    font-size: .9rem;
     transition: all .4s ease-out;
     outline: none;
     text-decoration: none;
     text-align: center;
     border: none;
-
 }
 .cart__total h2{
     font-weight: 100;

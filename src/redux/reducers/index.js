@@ -3,8 +3,10 @@ import { combineReducers } from 'redux';
 const selectedItemReducer = (selectedItem = [], action) => {
     switch (action.type) {
         case 'SELECT__ITEM':
-            return [...selectedItem, action.payload];
-
+            return [
+                ...selectedItem.filter(item => item !== action.payload),
+                action.payload,
+            ];
         case 'REMOVE__ITEM':
             return selectedItem.filter(item => item !== action.payload);
         default:

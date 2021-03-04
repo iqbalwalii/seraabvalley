@@ -3,7 +3,7 @@
     display: flex;
     width: 80vw;
     margin: 0 auto;
-    padding: 5rem;
+    /* padding: 5rem; */
     padding: 5rem auto;
 }
 .product__banner .banner__backdrop {
