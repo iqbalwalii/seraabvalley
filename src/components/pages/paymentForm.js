@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import valley from "../../api/vvalley";
+import valley from "../../api/valley";
 
 import './PaymentForm.css';
 // import valley from '../../api/valley';
