@@ -7,6 +7,14 @@
     height: 90vh;
 
 }
+.message__alert
+{
+    margin-top: 3.5rem;
+    color: rgb(43, 10, 10);
+    text-align: center;
+    background:linear-gradient(to left,  #da29b3, #ffffff);
+    font-size: 1rem;
+}
 .description
 {
     background: transparent;
@@ -89,7 +97,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        height: 140vh;
+        height: 120vh;
         background: rgba(160, 160, 160, 0.219);
     }
     
@@ -117,6 +125,15 @@
     {
         font-size: 1.5rem;
     }
+    .message__alert
+{
+    margin-top: 3.5rem;
+    color: rgb(43, 10, 10);
+    text-align: center;
+    background:linear-gradient(to left,  #da29b3, #ffffff);
+    font-size: .5rem;
+    padding: 1rem;
+}
    
 }
 

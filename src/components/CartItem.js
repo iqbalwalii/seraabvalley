@@ -3,6 +3,10 @@ import React, { useState } from 'react';
 import './CartItem.css';
 
 const CartItem = ({ item, removeItem, onChangeHandler, onDeleteHandler }) => {
+    const onQuantityChange = (e, itemName)=>{
+    
+        
+    }
     return (
         <div className="cart__item">
             <div className="cart__item__img">
@@ -18,11 +22,11 @@ const CartItem = ({ item, removeItem, onChangeHandler, onDeleteHandler }) => {
                             return (
                             
                             <button className="variant">
-                                <input onChange = {onChangeHandler}  type="radio" name={item.name}id={price}/>
+                                <input onChange = {onChangeHandler} data={1} type="radio" name={item.name}id={price}/>
                                 <div className="variant__price">
                                     <h3>  &#8377;  {price}</h3>
                                 </div>
-                                <div className="variant__quantity">
+                                <div className="variant__quantity" >
                                     <h3>{item.quantity[index]}</h3>
                                 </div>
                             </button>)
@@ -32,7 +36,9 @@ const CartItem = ({ item, removeItem, onChangeHandler, onDeleteHandler }) => {
                 </div>
                 <div>
                     <div className="cart__item__bottom">
-                        <input type="number" name="total_items" placeholder='1' min='1'/>
+                        <input type="number" onChange={(e)=>{
+                            onQuantityChange(e, item)
+                        }} name="total_items" placeholder='1' min='1'/>
                         <button className="cart__item__delete" onClick={() => {
                             onDeleteHandler(item.name);
                             removeItem(item._id)

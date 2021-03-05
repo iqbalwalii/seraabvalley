@@ -7,23 +7,30 @@ import valley from '../../api/valley'
 import './Contact.css'
 
 const Contact = () => {
-    const [values, setValues] = useState('');
+    window.scrollTo(0,0)
+
+    const [message, setMessage] = useState('')
+    const [values, setValues] = useState({
+        name:'',email:"",message:""
+    });
     const onSubmitHandler = event => {
         event.preventDefault();
        valley.post('/contact', {
                 ...values,
             })
-            .then(result => console.log(result))
+            .then(result => {
+                setMessage(result.data.message)
+            })
             .catch(result => console.log(result));
     };
     const onChangeHandler = event => {
-        setValues(prevState => {
-            return { ...prevState, [event.target.name]: event.target.value };
-        });
+        setValues( { ...values, [event.target.name]: event.target.value });
     };
+
     return (
         <div>
             <Navbar/>
+            {message && <div className='message__alert'><h1>{message}</h1></div>}
             <div className="contact__hero">
                 
                 <div className="description">
@@ -35,13 +42,13 @@ const Contact = () => {
                     <div className="backdrop__form">
 </div>
                     <form  onSubmit={onSubmitHandler}  className='contact_form_data'>
-                        <input className='contact__text' type="text"   value={values.name}
+                        <input className='contact__text' type="text" name="name"  value={values.name}
                             placeholder="Enter Your Name"
                             onChange={onChangeHandler}/>
-                        <input className='contact__text' type="email" required='required'   value={values.email}
+                        <input className='contact__text' type="email"  name="email" required='required'   value={values.email}
                             placeholder="Enter Your Email"
                             onChange={onChangeHandler}/>
-                        <textarea className='contact__text' placeholder='Message Description'  onChange={onChangeHandler} name="" id="" cols="30" rows="10"></textarea>
+                        <textarea className='contact__text' name="message" placeholder='Message Description'  onChange={onChangeHandler}  cols="30" rows="10"></textarea>
                         <input className='contact_form_submit' type="submit" value="Send"/>
                     </form>
                 </div>

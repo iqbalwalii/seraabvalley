@@ -22,6 +22,9 @@
     border: 2px solid rgba(0, 0, 0, 0.336);
     padding: 1rem;
     font-family: cursive;
+    outline: none;
+    border-radius: 8px;
+
 }
 .payment__form > form > select{
     padding: 0.4rem 1rem;
@@ -42,4 +45,17 @@
 .payment__form > .payment__form__heading
 {
     text-align: center;
+}
+@media only screen and (max-width:480px)
+{
+    .payment__form > form > input, .payment__form > form > select
+    {
+        width: 70vw;
+        border-radius:7px;
+        height: 6%;
+    }
+    .payment__form__heading
+    {
+        font-size: 1.2rem;
+    }
 }

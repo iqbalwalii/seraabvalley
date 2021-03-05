@@ -10,6 +10,8 @@ import {fetchProducts} from '../../redux/actions'
 
 
 const Homepage = (props) => {
+    window.scrollTo(0,0)
+
     console.log(props);
     const { products, fetchProducts } = props;
     useEffect(() => {

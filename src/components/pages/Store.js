@@ -11,7 +11,10 @@ import Navbar from '../Navbar';
 
 import './Store.css';
 import axios from 'axios';
+
 const Store = ({productsList, selectItem, fetchProducts}) => {
+    window.scrollTo(0,0)
+    
     useEffect(()=>{
     fetchProducts()
 },[fetchProducts])

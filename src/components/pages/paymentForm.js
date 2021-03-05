@@ -1,9 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
+import {useHistory} from 'react-router-dom';
 import valley from "../../api/valley";
 
 import './PaymentForm.css';
 // import valley from '../../api/valley';
-import axios from 'axios';
+// import axios from 'axios';
+// import { Link } from 'react-router-dom';
 
 const INITIAL_VALUES = {
     name: '',
@@ -125,6 +127,8 @@ cities['West Bengal'] =
     ' Adra | Alipurduar | Amlagora | Arambagh | Asansol | Balurghat | Bankura | Bardhaman | Basirhat | Berhampur | Bethuadahari | Birbhum | Birpara | Bishanpur | Bolpur | Bongoan | Bulbulchandi | Burdwan | Calcutta | Canning | Champadanga | Contai | Cooch Behar | Daimond Harbour | Dalkhola | Dantan | Darjeeling | Dhaniakhali | Dhuliyan | Dinajpur | Dinhata | Durgapur | Gangajalghati | Gangarampur | Ghatal | Guskara | Habra | Haldia | Harirampur | Harishchandrapur | Hooghly | Howrah | Islampur | Jagatballavpur | Jalpaiguri | Jhalda | Jhargram | Kakdwip | Kalchini | Kalimpong | Kalna | Kandi | Karimpur | Katwa | Kharagpur | Khatra | Krishnanagar | Mal Bazar | Malda | Manbazar | Mathabhanga | Medinipur | Mekhliganj | Mirzapur | Murshidabad | Nadia | Nagarakata | Nalhati | Nayagarh | Parganas | Purulia | Raiganj | Rampur Hat | Ranaghat | Seharabazar | Siliguri | Suri | Takipur | Tamluk';
 
 const PaymentForm = props => {
+    const history = useHistory();
+    const [message, setMessage] = useState('');
     const [state, setState] = useState('');
     const [formValues, setFormValues] = useState(INITIAL_VALUES);
     const [stateCities, setStateCities] = useState('');
@@ -163,8 +167,13 @@ const PaymentForm = props => {
                 landmark: formValues.landmark,
             },
         });
+        console.log(response.data);
+        setMessage(response.data);
+        history.push({
+            pathname: '/success',
+            state: { message:response.data}
+          })
 
-        console.log(response);
     };
     return (
         <div className="payment__form">
@@ -173,7 +182,9 @@ const PaymentForm = props => {
             <form onSubmit={onSubmitHandler}>
                 <input
                     type="text"
-                    name="name"
+                    name="name"                 
+                       required
+
                     onChange={onChangeHandler}
                     placeholder="Name"
                     value={formValues.name}
@@ -181,6 +192,8 @@ const PaymentForm = props => {
                 <input
                     type="text"
                     name="address"
+                    required
+
                     onChange={onChangeHandler}
                     placeholder="Address"
                     value={formValues.address}
@@ -219,7 +232,9 @@ const PaymentForm = props => {
                 </select>
                 <input
                     type="number"
-                    min="6"
+                    required
+                    minLength="6"
+                    maxLength='6'
                     name="pin_code"
                     onChange={onChangeHandler}
                     value={formValues.pin_code}
@@ -236,7 +251,10 @@ const PaymentForm = props => {
                 <input
                     type="number"
                     name="number"
-                    min="10"
+                    required
+
+                    minLength="10"
+                    maxLength='10'
                     value={formValues.number}
                     onChange={onChangeHandler}
                     placeholder="Enter Your Mobile Number"
@@ -244,6 +262,7 @@ const PaymentForm = props => {
                 <input
                     type="text"
                     name="landmark"
+                    required
                     value={formValues.landmark}
                     onChange={onChangeHandler}
                     placeholder="Landmark e.g near Apollo Hospital"
@@ -254,7 +273,11 @@ const PaymentForm = props => {
                 <label>
                     <input type="radio" name="mode" value="Pay Now" /> Pay Now
                 </label> */}
-                <button type="submit">Checkout</button>
+              {
+
+props?.location?.state?.cartTotal && <button type="submit">Checkout</button>
+              }
+
             </form>
         </div>
     );

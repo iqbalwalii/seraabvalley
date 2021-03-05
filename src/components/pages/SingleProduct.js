@@ -7,6 +7,7 @@ import Footer from '../Footer'
 import './SingleProduct.css';
 
 const SingleProduct = (props) => {
+    window.scrollTo(0,0)
     const product  = (props.location.state);    
     if (!product) {
         return <div>loading...</div>;

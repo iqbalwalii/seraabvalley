@@ -9,7 +9,9 @@ import './Cart.css'
 import CartItem from '../CartItem';
 import { Link } from 'react-router-dom';
 
-const Cart = ({ cartItems, productsList, removeItem }) => {  
+const Cart = ({ cartItems, productsList, removeItem }) => { 
+    window.scrollTo(0,0)
+
     // let values = {}    
     const [values, setValues] = useState({});
     const [cartTotal, setcartTotal] = useState(0);
@@ -26,6 +28,14 @@ const Cart = ({ cartItems, productsList, removeItem }) => {
         setValues(temp)
         return;
     }
+const onQuantityChange = (e, itemName)=>{
+    console.log('inQuantity change', e.target.value)
+    console.log('inQuantity change', itemName)
+    console.log('inQuantity change', cartItems)
+    console.log([`${itemName}`] * e.target.value)
+
+   setValues({...values, itemName: cartItems[`${itemName}`] * e.target.value});
+}
 useEffect(() => {
     setcartTotal(Object.values(values).reduce((accumulator, currentValue) => Number(accumulator) + Number(currentValue), 0));
     console.log(values)
@@ -45,11 +55,11 @@ useEffect(() => {
                cartItems &&  <div className="cart__main ">
                <div className="cart__items">
                {match.map(item => (
-                       <CartItem item={item} removeItem={removeItem} onChangeHandler = {onChangeHandler} onDeleteHandler = {onDeleteHandler}/>
+                       <CartItem onQuantityChange={onQuantityChange} item={item} removeItem={removeItem} onChangeHandler = {onChangeHandler} onDeleteHandler = {onDeleteHandler}/>
                    ))}                   
                </div>
                <div className="cart__total">
-                   <h2>Subtotal ({match.length} items) <span>&#8377; {cartTotal}</span></h2>
+                   <h2>Subtotal ({match.length} items) <br/> <span>&#8377; {cartTotal}</span></h2>
                 {
                     cartTotal?  <Link to={{pathname:'/pay', state:{values, cartTotal}}}className='checkout__btn'>Proceed to checkout</Link>: <div style={{marginTop: '20vh'}}>your cart is empty please go to store</div>
                 }   

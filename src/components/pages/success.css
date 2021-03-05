@@ -1,0 +1,258 @@
+@keyframes trophy {
+	0% {
+		transform: translateY(500px);
+		opacity: 0;
+   }
+	35% {
+		opacity: 0;
+   }
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+   }
+}
+@keyframes fly--up {
+	0% {
+		transform: translateY(10px);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	80% {
+		transform: translateY(-20vw);
+   }
+	100% {
+		transform: translateY(-15vw);
+		opacity: 0;
+   }
+}
+@keyframes fly--down {
+	0% {
+		transform: translateY(-10px);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	80% {
+		transform: translateY(20vw);
+   }
+	100% {
+		transform: translateY(15vw);
+		opacity: 0;
+   }
+}
+@keyframes fly--left {
+	0% {
+		transform: translateX(10px);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	80% {
+		transform: translateX(-35vw);
+   }
+	100% {
+		transform: translateX(-180px);
+		opacity: 0;
+   }
+}
+@keyframes fly--right {
+	0% {
+		transform: translateX(-10px);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	80% {
+		transform: translateX(35vw);
+   }
+	100% {
+		transform: translateX(180px);
+		opacity: 0;
+   }
+}
+@keyframes fly--up--left {
+	0% {
+		transform: rotate(135deg) translate(0vw, 0vw);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	100% {
+		transform: rotate(135deg) translate(-3vw, 20vw);
+		opacity: 0;
+   }
+}
+@keyframes fly--up--right {
+	0% {
+		transform: rotate(45deg);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	100% {
+		transform: rotate(45deg) translate(-3vw, -20vw);
+		opacity: 0;
+   }
+}
+@keyframes fly--down--left {
+	0% {
+		transform: rotate(45deg) translate(0vw, 0vw);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	100% {
+		transform: rotate(45deg) translate(-3vw, 20vw);
+		opacity: 0;
+   }
+}
+@keyframes fly--down--right {
+	0% {
+		transform: rotate(135deg) translate(0vw, 0vw);
+		opacity: 0;
+   }
+	60% {
+		opacity: 1;
+   }
+	100% {
+		transform: rotate(135deg) translate(0vw, -20vw);
+		opacity: 0;
+   }
+}
+html, body {
+	padding: 0;
+	margin: 0;
+}
+.message__success
+{
+	background-color: #ffea00;
+	padding: .5rem;
+	text-align: center;
+	border-radius: 20px;
+	margin-bottom: .4rem;
+}
+.success_container {
+	overflow: hidden;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	outline: solid 1px red;
+	background-color: rgb(100, 184, 175);
+}
+.trophy {
+	z-index: 1;
+	background-color: #fff;
+	height: 100%;
+	width: 100%;
+	border-radius: 100%;
+	animation: trophy 0.5s 1 forwards;
+}
+.action {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 300px;
+	height: 25vw;
+	max-width: 300px;
+	width: 25vw;
+}
+.action .confetti, .action .confetti--purple {
+	z-index: -1;
+	position: absolute;
+	height: 50px;
+	width: 10px;
+	border-radius: 10px;
+	animation-fill-mode: forwards;
+	animation-duration: 0.75s;
+	animation-iteration-count: 1;
+	transform-origin: center middle;
+	opacity: 0;
+}
+.action .confetti {
+	top: 0;
+	left: calc(50% - 5px);
+	background-color: #ffea00;
+	animation-name: fly--up;
+	animation-delay: 0.35s;
+}
+.action .confetti.two {
+	top: auto;
+	bottom: 0;
+	animation-name: fly--down;
+}
+.action .confetti.three, .action .confetti.four {
+	top: calc(50% - 5px);
+	left: calc(50% - 25px);
+	height: 10px;
+	width: 50px;
+	animation-name: fly--left;
+}
+.action .confetti.four {
+	animation-name: fly--right;
+}
+.action .confetti--purple {
+	background-color: #6200ea;
+	animation-name: fly--up--left;
+	transform: rotate(135deg);
+	animation-delay: 0.5s;
+	left: 20%;
+	top: 20%;
+}
+.action .confetti--purple.two {
+	animation-name: fly--up--right;
+	left: auto;
+	right: 20%;
+	transform: rotate(45deg);
+}
+.action .confetti--purple.three {
+	top: auto;
+	bottom: 20%;
+	transform: rotate(45deg);
+	animation-name: fly--down--left;
+}
+.action .confetti--purple.four {
+	top: auto;
+	bottom: 20%;
+	left: auto;
+	right: 20%;
+	transform: rotate(135deg);
+	animation-name: fly--down--right;
+}
+/* .return__btn
+{
+	padding: .5rem;
+	font-size: .9rem;
+	position: absolute;
+	bottom: -30%;
+	left:0%;
+	text-align: center;
+	 padding-top: 9rem;
+	background: #ffd601;
+	border-radius: 20px;
+	outline: none;
+	width: 100%;
+	transition: .3s all linear;
+	
+}  .return__btn:hover
+{
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	outline: none;
+} */
+@media only screen and (max-width:480px)
+{
+	.message__success
+{
+	position: absolute;
+    top: -130%;
+}
+} 
