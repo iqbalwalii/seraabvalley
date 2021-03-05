@@ -58,4 +58,10 @@
     {
         font-size: 1.2rem;
     }
+    .payment__form > form > button{
+        width: 40vw;
+        font-size: 1rem;
+        margin-top: 1rem;
+    }
+
 }

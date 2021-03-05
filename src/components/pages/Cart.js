@@ -28,14 +28,7 @@ const Cart = ({ cartItems, productsList, removeItem }) => {
         setValues(temp)
         return;
     }
-const onQuantityChange = (e, itemName)=>{
-    console.log('inQuantity change', e.target.value)
-    console.log('inQuantity change', itemName)
-    console.log('inQuantity change', cartItems)
-    console.log([`${itemName}`] * e.target.value)
 
-   setValues({...values, itemName: cartItems[`${itemName}`] * e.target.value});
-}
 useEffect(() => {
     setcartTotal(Object.values(values).reduce((accumulator, currentValue) => Number(accumulator) + Number(currentValue), 0));
     console.log(values)
@@ -55,7 +48,7 @@ useEffect(() => {
                cartItems &&  <div className="cart__main ">
                <div className="cart__items">
                {match.map(item => (
-                       <CartItem onQuantityChange={onQuantityChange} item={item} removeItem={removeItem} onChangeHandler = {onChangeHandler} onDeleteHandler = {onDeleteHandler}/>
+                       <CartItem  item={item} removeItem={removeItem} onChangeHandler = {onChangeHandler} onDeleteHandler = {onDeleteHandler}/>
                    ))}                   
                </div>
                <div className="cart__total">
