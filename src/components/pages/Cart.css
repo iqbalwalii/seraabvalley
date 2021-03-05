@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-around;
-    /* margin: auto; */
+    margin: auto;
     width: 80vw;
     align-items: flex-start;
     padding-top: 20vh;
@@ -149,9 +149,9 @@ hr
 {
     .cart__item__img >img
     {
-        margin-right: 1rem;
+        width: 30vw;
+        margin-top: 3rem;
         border-radius: 20px;
-        width: 40vw;
     }
     .cart__item__name
     {

@@ -6,13 +6,13 @@ const CartItem = ({ item, removeItem, onChangeHandler, onDeleteHandler }) => {
     return (
         <div className="cart__item">
             <div className="cart__item__img">
-                <img src={item.imageUrl} alt={item.name} />
+                <img src={`/assets/images/products/${(item.name).trim()}.jpg`} alt={item.name} />
             </div>
             <div className="cart__item__right">
                 <div>
                     <p className="cart__item__name">{item.name}</p>
                     {/* <p className="cart__item__price">{item.price}</p> */}
-                    <div className='single__product__price__group'>
+                    <div className='cart__product__price__group'>
                     {
                         item.price.map( (price, index) => {
                             return (

@@ -54,7 +54,7 @@ const SingleProduct = (props) => {
                      <div className="product__use">
                         <h1 className="product__heading">
                             How to use</h1>
-                        <p>{product.benefits}</p>
+                        <p>{product.howToUse}</p>
                     </div>
             </div>
         <Footer/>

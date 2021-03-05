@@ -23,6 +23,11 @@
     padding: 1rem;
     font-family: cursive;
 }
+.payment__form > form > select{
+    padding: 0.4rem 1rem;
+
+}
+
 .payment__form > form > button{
     background-color: #1e90ff;
     color: #fff;

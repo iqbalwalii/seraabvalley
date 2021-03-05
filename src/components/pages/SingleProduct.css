@@ -53,9 +53,10 @@
             margin: 10px auto
         
         }
-        .product__benefits
+        .product__benefits, .product__use
         {
-            margin-bottom: 10%;
+            /* margin-bottom: 10%; */
+            width: 50%;
         }
         .product__heading
         {
@@ -194,9 +195,10 @@
         margin: 10px auto
     
     }
-    .product__benefits
+    .product__benefits, .product__use
     {
         margin-bottom: 10%;
+        width: 100%;
     }
     .product__heading
     {
@@ -262,7 +264,8 @@
         border-bottom: 2px solid rgba(97, 160, 243, 0.473);
         width: 40%;
         margin: auto;
-    } .product__item__bottom > div > p
+    } 
+    .product__item__bottom > div > p
     {
        
         text-align:center;
@@ -320,9 +323,10 @@
             margin: 10px auto
         
         }
-        .product__benefits
+        .product__benefits, .product__use
         {
-            margin-bottom: 10%;
+            margin-top: 10%;
+            width: 100%;
         }
         .product__heading
         {
@@ -387,6 +391,7 @@
             font-size: 0.9rem;
         }
         .product__item__bottom{
+            flex-direction: column;
             padding: 1rem 2rem;
             
         }

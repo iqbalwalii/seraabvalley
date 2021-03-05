@@ -51,7 +51,7 @@ useEffect(() => {
                <div className="cart__total">
                    <h2>Subtotal ({match.length} items) <span>&#8377; {cartTotal}</span></h2>
                 {
-                    cartTotal?  <Link to={{pathname:'/pay', state:{values}}}className='checkout__btn'>Proceed to checkout</Link>: <div style={{marginTop: '20vh'}}>your cart is empty please go to store</div>
+                    cartTotal?  <Link to={{pathname:'/pay', state:{values, cartTotal}}}className='checkout__btn'>Proceed to checkout</Link>: <div style={{marginTop: '20vh'}}>your cart is empty please go to store</div>
                 }   
                </div>
            </div>

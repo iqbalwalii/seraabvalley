@@ -14,7 +14,9 @@ color: rgb(255, 255, 255);
 }
 .cart__product__price__group
 {
-    margin-right: 1rem;}
+    margin-left: 1rem;
+
+}
 
 .cart__item .cart__product__price__group > input{
     display: flex;
