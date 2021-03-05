@@ -1,8 +1,11 @@
 import React from 'react'
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom'
+import {clearCart} from '../../redux/actions'
 import './success.css'
 const success = (props) => {
     console.log(props.history?.location.state.message)
+    props.clearCart();
     return (
         <div>
             <div className="success_container">
@@ -30,4 +33,7 @@ const success = (props) => {
     )
 }
 
-export default success
+
+
+export default connect(null, {clearCart})(success)
+

@@ -9,6 +9,9 @@ const selectedItemReducer = (selectedItem = [], action) => {
             ];
         case 'REMOVE__ITEM':
             return selectedItem.filter(item => item !== action.payload);
+        case 'EMPTY__CART':
+            console.log('getting user state',selectedItem);
+            return action.payload;    
         default:
             return selectedItem;
     }
@@ -20,6 +23,7 @@ const userReducer = (state = {}, action) => {
     if (action.type === 'LOGOUT__USER') {
         return action.payload;
     }
+    
     return state;
 };
 

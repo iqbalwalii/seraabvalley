@@ -167,6 +167,10 @@ a {
         flex-direction: column;
         padding: 10px 0px
     }
+    nav .cart__total {
+        width: 100%;
+        right: -4%;
+    }
 
 }
 

@@ -16,6 +16,13 @@ export const removeItem = item => {
         payload: item,
     };
 };
+export const clearCart = () => {
+    console.log('in action clearCart');
+    return {
+        type: 'EMPTY__CART',
+        payload: '',
+    };
+};
 export const logout = () => {
     return {
         type: 'LOGOUT__USER',
