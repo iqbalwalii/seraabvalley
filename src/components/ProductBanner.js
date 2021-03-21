@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import ProductItem from './ProductItem';
-import {selectItem} from '../redux/actions'
 import './ProductBanner.css';
+import {selectItem} from '../redux/actions'
 import { connect } from 'react-redux';
 
 const ProductBanner = ({productItems, selectItem, text, heading}) => {
